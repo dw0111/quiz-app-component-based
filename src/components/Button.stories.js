@@ -6,3 +6,5 @@ export default {
 }
 
 export const base = () => Button('Storybook button')
+export const longText = () =>
+  Button("Click Me! (...or not, I don't care, I'm just here for the length.)")

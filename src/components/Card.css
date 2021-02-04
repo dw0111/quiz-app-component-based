@@ -1,8 +1,26 @@
 .Card {
+  position: relative;
+  display: grid;
   background: var(--color-background);
   color: var(--color-primary);
   border: 2px solid var(--color-secondary);
-  border-radius: 15px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 15px 10px;
   margin: 0 5px;
+}
+
+.Card__heading {
+  margin: 10px 0;
+}
+
+.Card__answer {
+  justify-self: end;
+  text-align: end;
+}
+
+.Card__bookmark {
+  position: absolute;
+  top: -8px;
+  right: 20px;
+  color: var(--color-mediumred);
 }
