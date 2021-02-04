@@ -1,13 +1,14 @@
 .Header {
   text-align: center;
-  border: 1px solid var(--color-primary);
+  border: 2px solid var(--color-secondary);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
+  width: 100%;
 }
 
 .Header__title {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: var(--color-background);
   padding-top: 8px;
   margin: 0;

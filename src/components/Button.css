@@ -1,7 +1,7 @@
 .Button {
   background: var(--color-secondary);
   color: var(--color-background);
-  border: none;
+  border: 2px solid var(--color-primary);
   border-radius: 5px;
   padding: 0.625em;
   font-weight: bold;
