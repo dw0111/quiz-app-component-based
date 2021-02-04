@@ -1,0 +1,7 @@
+.Button {
+  background: hotpink;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.625em;
+}
