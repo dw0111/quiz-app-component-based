@@ -1,8 +1,6 @@
 # Quiz App
 
-## Template usage
-
-_Don't forget to update the author (and more) in the package.json_
+Redo of the neuefische bootcamp quiz app in JS. The idea is to write all HTML in JS instead.
 
 ## Installation
 
