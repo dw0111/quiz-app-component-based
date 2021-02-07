@@ -1,15 +1,13 @@
 import Header from './components/Header'
-import Button from './components/Button'
 import Card from './components/Card'
 
 const header = Header('Quiz App', 'QuizHeads unite!')
 document.body.append(header)
 
-const card = Card(
-  'Which city is the capital of Germany?',
-  "Berlin is Germany's capital."
-)
-document.body.append(card)
+const card1 = Card('Which city is the capital of Germany?', 'Berlin')
 
-const button = Button('Click Me!')
-document.body.append(button)
+const card2 = Card('Which city is the capital of the Netherlands?', 'Amsterdam')
+
+const card3 = Card('Which city is the capital of Denmark?', 'Copenhagen')
+
+document.body.append(card1, card2, card3)
