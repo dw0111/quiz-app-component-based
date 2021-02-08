@@ -1,14 +1,24 @@
 import Header from './components/Header/Header'
-import Button from './components/Button/Button'
 import Card from './components/Card/Card'
+import Navigation from './components/Navigation/Navigation'
+import createElement from './lib/createElement'
+import './components/App-Grid/App-Grid.css'
 
 const header = Header('Quiz App', 'QuizHeads unite!')
-document.body.append(header)
+const navigation = Navigation(navigate)
 
-const card1 = Card('Which city is the capital of Germany?', 'Berlin')
-const card2 = Card('Which city is the capital of the Netherlands?', 'Amsterdam')
-const card3 = Card('Which city is the capital of Denmark?', 'Copenhagen')
-document.body.append(card1, card2, card3)
+function navigate(text) {
+  console.log(text)
+}
 
-const button = Button('Click Me!')
-document.body.append(button)
+const grid = createElement(
+  'div',
+  { className: 'app-grid' },
+  header,
+  Card('Which city is the capital of Germany?', 'Berlin'),
+  Card('Which city is the capital of the Netherlands?', 'Amsterdam'),
+  Card('Which city is the capital of Denmark?', 'Copenhagen'),
+  navigation
+)
+
+document.body.append(grid)

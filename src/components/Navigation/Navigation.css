@@ -1,0 +1,10 @@
+.Navigation {
+  display: flex;
+  height: 2.5em;
+}
+
+.Navigation__button {
+  border: none;
+  background: var(--color-background);
+  color: var(--color-secondary);
+}
