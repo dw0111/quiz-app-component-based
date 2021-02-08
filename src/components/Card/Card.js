@@ -1,4 +1,4 @@
-import createElement from '../lib/createElement'
+import createElement from '../../lib/createElement'
 import './Card.css'
 
 export default function Card(question, answer) {
