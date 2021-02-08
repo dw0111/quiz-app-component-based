@@ -4,6 +4,9 @@
 }
 
 .Navigation__button {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
   border: none;
   background: var(--color-background);
   color: var(--color-secondary);
