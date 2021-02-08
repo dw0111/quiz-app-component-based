@@ -5,4 +5,4 @@ export default {
   component: CreateForm,
 }
 
-export const base = () => CreateForm
+export const base = () => CreateForm()
