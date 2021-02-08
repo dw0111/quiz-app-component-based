@@ -1,5 +1,7 @@
 .app-grid {
   display: grid;
+  grid-template-rows: 118px auto 48px;
+  height: 100vh;
   justify-items: center;
   gap: 30px;
   font-family: sans-serif;
