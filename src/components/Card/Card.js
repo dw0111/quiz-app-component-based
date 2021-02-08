@@ -1,6 +1,5 @@
-import createElement from '../lib/createElement'
+import createElement from '../../lib/createElement'
 import './Card.css'
-import './Button.css'
 
 export default function Card(question, answer) {
   const el = createElement(
