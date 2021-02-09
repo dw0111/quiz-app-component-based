@@ -35,10 +35,11 @@ export default function CreateForm(onSubmit) {
 
   el.addEventListener('submit', event => {
     event.preventDefault()
-    const { question: questionInput, answer: answerInput } = el.elements
-    const question = questionInput.value
-    const answer = answerInput.value
+    const question = el.elements.question.value
+    const answer = el.elements.answer.value
     onSubmit(question, answer)
+    alert('Question added succesfully!')
+    el.reset()
   })
 
   return el
