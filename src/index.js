@@ -11,17 +11,17 @@ const navigation = Navigation(navigate)
 
 function navigate(text) {
   if (text === 'Home') {
-    homepage.hidden = false
-    createpage.hidden = true
+    homepage.classList.toggle('hidden')
+    createpage.classList.toggle('hidden')
   } else if (text === 'Create') {
-    homepage.hidden = true
-    createpage.hidden = false
+    homepage.classList.toggle('hidden')
+    createpage.classList.toggle('hidden')
   }
 }
 
 const homepage = createElement(
   'main',
-  { className: 'HomePage', hidden: false },
+  { className: 'HomePage' },
   Card('Which city is the capital of Germany?', 'Berlin'),
   Card('Which city is the capital of the Netherlands?', 'Amsterdam'),
   Card('Which city is the capital of Denmark?', 'Copenhagen')
@@ -29,7 +29,7 @@ const homepage = createElement(
 
 const createpage = createElement(
   'main',
-  { className: 'CreatePage', hidden: true },
+  { className: 'CreatePage hidden' },
   CreateForm()
 )
 
