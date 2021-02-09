@@ -1,22 +1,16 @@
 import createElement from '../../lib/createElement'
 import './Header.css'
 
-export default function Header(title, subtitle) {
-  const el = createElement(
-    'header',
-    { className: 'Header' },
-    createElement(
-      'h1',
-      {
-        className: 'Header__title',
-        textContent: `${title}`,
-      },
-      createElement('span', {
-        className: 'Header__subtitle',
-        textContent: `${subtitle}`,
-      })
-    )
-  )
+export default function Header(title) {
+  const headerTitle = createElement('h1', {
+    className: 'Header__title',
+    textContent: `${title}`,
+  })
+  const el = createElement('header', { className: 'Header' }, headerTitle)
 
-  return el
+  function setText(text) {
+    headerTitle.textContent = `${text}`
+  }
+
+  return { el, setText }
 }

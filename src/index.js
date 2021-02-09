@@ -2,9 +2,9 @@ import Header from './components/Header/Header'
 import Card from './components/Card/Card'
 import Navigation from './components/Navigation/Navigation'
 import createElement from './lib/createElement'
-import CreateForm from './components/CreateForm/CreateForm'
 import HomePage from './components/HomePage/HomePage'
 import './components/App-Grid/App-Grid.css'
+import CreatePage from './components/CreatePage/CreatePage'
 
 const header = Header('Quiz App', 'QuizHeads unite!')
 const navigation = Navigation(navigate)
@@ -18,18 +18,14 @@ const cards = [
 
 const homepage = HomePage(cards)
 
-const createpage = createElement(
-  'main',
-  { className: 'CreatePage', hidden: true },
-  CreateForm(onSubmit)
-)
+const createpage = CreatePage(onSubmit)
 
 const grid = createElement(
   'div',
   { className: 'app-grid' },
-  header,
+  header.el,
   homepage.el,
-  createpage,
+  createpage.el,
   navigation
 )
 
@@ -38,10 +34,12 @@ document.body.append(grid)
 function navigate(text) {
   if (text === 'Home') {
     homepage.show()
-    createpage.hidden = true
+    createpage.hide()
+    header.setText('Dashboard')
   } else if (text === 'Create') {
     homepage.hide()
-    createpage.hidden = false
+    createpage.show()
+    header.setText('New question')
   }
 }
 
@@ -54,6 +52,6 @@ function renderCards() {
   const cardElements = cards.map(({ question, answer }) =>
     Card(question, answer)
   )
-  homepage.innerHTML = ''
-  homepage.append(...cardElements)
+  homepage.el.innerHTML = ''
+  homepage.el.append(...cardElements)
 }
