@@ -5,19 +5,12 @@
   border-bottom-right-radius: 20px;
   overflow: hidden;
   width: 100%;
-}
-
-.Header__title {
   background-color: var(--color-secondary);
-  color: var(--color-background);
-  padding-top: 8px;
   margin: 0;
 }
 
-.Header__subtitle {
-  display: block;
-  font-size: 75%;
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  padding: 8px;
+.Header__title {
+  color: var(--color-background);
+  padding-top: 8px;
+  margin: 0;
 }
