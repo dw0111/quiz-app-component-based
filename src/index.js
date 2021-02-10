@@ -3,8 +3,8 @@ import Card from './components/Card/Card'
 import Navigation from './components/Navigation/Navigation'
 import createElement from './lib/createElement'
 import HomePage from './components/HomePage/HomePage'
-import './components/App-Grid/App-Grid.css'
 import CreatePage from './components/CreatePage/CreatePage'
+import './components/App-Grid/App-Grid.css'
 
 const header = Header('Quiz App', 'QuizHeads unite!')
 const navigation = Navigation(navigate)

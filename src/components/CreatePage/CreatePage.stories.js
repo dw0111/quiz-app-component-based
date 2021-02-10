@@ -1,7 +1,7 @@
 import CreatePage from './CreatePage'
 
 export default {
-  title: 'Create Form',
+  title: 'Pages/CreatePage',
   component: CreatePage,
 }
 
